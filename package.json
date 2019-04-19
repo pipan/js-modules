@@ -1,0 +1,29 @@
+{
+  "name": "js-modules",
+  "version": "0.1.0",
+  "description": "Modular development for JS applications",
+  "main": "dist/index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipan/js-modules.git"
+  },
+  "dependencies": {
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.3"
+  },
+  "keywords": [
+    "js",
+    "modules",
+    "application"
+  ],
+  "author": "peter gasparik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pipan/js-modules/issues"
+  },
+  "homepage": "https://github.com/pipan/js-modules#readme"
+}
