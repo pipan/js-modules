@@ -1,5 +1,5 @@
 {
-  "name": "@wildbeest/js-modules",
+  "name": "@wildebeest/js-modules",
   "version": "0.1.0",
   "description": "Modular development for JS applications",
   "main": "dist/index.js",
