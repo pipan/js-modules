@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "Modular development for JS applications",
   "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc --declaration"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,7 @@
     "modules",
     "application"
   ],
-  "author": "peter gasparik",
+  "author": "Peter Gasparik",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pipan/js-modules/issues"

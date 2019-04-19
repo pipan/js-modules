@@ -1,0 +1,15 @@
+import "reflect-metadata";
+import { Container } from "inversify";
+import { Module } from "./Module";
+export declare class Application {
+    protected container: Container;
+    protected modules: Array<any>;
+    protected loadedModules: Array<Module>;
+    constructor();
+    run(modules?: Array<any>): void;
+    getContainer(): Container;
+    protected loadModule(moduleClass: any, stack?: Array<any>): void;
+    protected addDependencies(modules: Array<any>, stack?: Array<any>): void;
+    register(container: Container): void;
+    boot(container: Container): void;
+}
