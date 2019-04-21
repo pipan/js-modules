@@ -29,7 +29,7 @@ export class Application
     protected loadModule(moduleClass: any, stack: Array<any> = []): void
     {
         if (stack.indexOf(moduleClass) > -1) {
-            throw "Modules circular dependency detected at: '" + moduleClass + '. Full stack of dependencies: ' + stack.join(", ");
+            throw new Error("Modules circular dependency detected at: '" + moduleClass + "'. Full stack of dependencies: " + stack.join(", "));
         }
         stack = stack.slice(0);
          stack.push(moduleClass);
