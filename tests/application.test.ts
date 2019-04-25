@@ -53,7 +53,19 @@ class ThirdModule
     }
 }
 
-test("test application circular dependency", () => {
+class FourthModule
+{
+    getDependencies(): Array<any>
+    {
+        return [ThirdModule];
+    }
+
+    register(container: Container): void { }
+
+    boot(container: Container): void { }
+}
+
+test("application circular dependency", () => {
     let app = new Application();    
 
     expect(() => {
@@ -61,16 +73,23 @@ test("test application circular dependency", () => {
     }).toThrow();
 });
 
-test("test application register service", () => {
+test("application register service", () => {
     let app = new Application();    
     app.run([ThirdModule]);
 
     expect(app.getContainer().get(Service)).toBeInstanceOf(Service);
 });
 
-test("test application boot", () => {
+test("application boot", () => {
     let app = new Application();    
     app.run([ThirdModule]);
+
+    expect(app.getContainer().get(Service).getValue()).toBe(100);
+});
+
+test("application boot included module first", () => {
+    let app = new Application();    
+    app.run([ThirdModule, FourthModule]);
 
     expect(app.getContainer().get(Service).getValue()).toBe(100);
 });
