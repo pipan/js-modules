@@ -52,14 +52,14 @@ export class Application
         }
     }
 
-    public register(container: Container): void
+    protected register(container: Container): void
     {
         for (let i = 0; i < this.loadedModules.length; i++) {
             this.loadedModules[i].register(container);
         }
     }
 
-    public boot(container: Container): void
+    protected boot(container: Container): void
     {
         for (let i = 0; i < this.loadedModules.length; i++) {
             this.loadedModules[i].boot(container);
