@@ -10,6 +10,6 @@ export declare class Application {
     getContainer(): Container;
     protected loadModule(moduleClass: any, stack?: Array<any>): void;
     protected addDependencies(modules: Array<any>, stack?: Array<any>): void;
-    register(container: Container): void;
-    boot(container: Container): void;
+    protected register(container: Container): void;
+    protected boot(container: Container): void;
 }
