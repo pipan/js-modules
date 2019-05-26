@@ -1,5 +1,7 @@
 # Modules
 
+[![Build Status](https://travis-ci.com/pipan/js-modules.svg?branch=master)](https://travis-ci.com/pipan/js-modules)
+
 I think that, creating reusable code is one of the most important thing in software development. That's why I created this simple modular system for any application. You can use existing modules or create your own, even use third party libraries, wrap them in module, and use them.
 
 ## Running Application
